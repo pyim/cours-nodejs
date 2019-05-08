@@ -25,7 +25,7 @@ const userLogout = require('./controllers/userLogout')
 
 
 const app = express();
-mongoose.connect('mongodb://i-maginer.local:27017/blog');
+mongoose.connect('mongodb://localhost:27017/blog');
 const mongoStore = MongoStore(expressSession)
 
 app.use(connectFlash())
@@ -102,7 +102,7 @@ app.use( (req, res) => {
 } )
 
 
-app.listen(80, function() {
-    console.log("Le serveur tourne sur le port 80");
+app.listen(4000, function() {
+    console.log("Le serveur tourne sur le port 4000");
     
 })
